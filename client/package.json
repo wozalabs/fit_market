@@ -1,0 +1,17 @@
+{
+  "name": "fit_market",
+  "version": "1.0.0",
+  "description": "PoC with Lisk",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Woza Labs",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "@liskhq/lisk-api-client": "^3.0.1",
+    "@liskhq/lisk-cryptography": "^2.4.2",
+    "@liskhq/lisk-passphrase": "^3.0.0",
+    "@liskhq/lisk-transactions": "^3.0.2"
+  }
+}
