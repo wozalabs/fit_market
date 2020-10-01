@@ -5,46 +5,21 @@
         "publicKey": "5c554d43301786aec29a09b13b485176e81d1532347a351aeafe018c199fd7ca",
         "privateKey": "a933efa9fcf02829777ab2815272b1e1ba553c91e1064b3975347d060008ecf45c554d43301786aec29a09b13b485176e81d1532347a351aeafe018c199fd7ca"
     },
-    "fitmarket": {
-        "address": "9000837102371535794L",
-        "passphrase": "galaxy bottom bounce success earth load cupboard repair eyebrow kitchen pistol ozone",
-        "publicKey": "af667a34d26206ec30dc8451d1e8fdf936d79aa4e7f4b0043f126908616f0a58",
-        "privateKey": "8d5d222ccf225c06a6ae744f18f8c1ccc1a58008e6753bb2f3abae9f6d5c2d69af667a34d26206ec30dc8451d1e8fdf936d79aa4e7f4b0043f126908616f0a58",
-        "name": "Fit Market",
-        "latitude": -34.6037,
-        "longitude": -58.3819
-    },
-    "producer": {
-        "address": "1853159333580129910L",
-        "passphrase": "reopen surprise shock make make jeans push ensure boring gloom ankle stem"    ,
-        "publicKey": "6930fa44bfdf931d1aefeda843b12f2401f177609ad57c24fa06e94e0c749f40",
-        "privateKey": "914b778967585db880eb6327a344ffa6e73d2efb404824b7e5df9c4bd8b2c9486930fa44bfdf931d1aefeda843b12f2401f177609ad57c24fa06e94e0c749f40",
-        "name": "Woza Labs Alfajores",
-        "latitude": -34.80041,
-        "longitude": -58.38384
-    },
-    "carrier": {
-        "address": "16537225521900431256L",
-        "passphrase": "gasp mass rose pause case solid lyrics aerobic fly real seven confirm",
-        "publicKey": "e2be337a259a409f6b2096240445b39e7307305342b11762a3e7a34259a9c516",
-        "privateKey": "6221facbac9ca2fe1fd02e51cd5fe44238708f11084ea7ffdaa1be95bf33d9c3e2be337a259a409f6b2096240445b39e7307305342b11762a3e7a34259a9c516"
-    },
-    "product": {
-        "address": "5960010569878593296L",
-        "passphrase": "loan relax clerk region journey gasp draw decrease defy project magnet miss",
-        "publicKey": "edafc274c138f7002b31c3bcf8068c4df823dcc855ad3bef09239fce6debe70a",
-        "privateKey": "da7256eba800a78257651cde183190b91c9d361143454ee5a7f04f5542dfcb30edafc274c138f7002b31c3bcf8068c4df823dcc855ad3bef09239fce6debe70a",
-        "barcode": "0076625228600",
-        "batch": "NUEZ0001",
-        "name": "Alfajor de nuez relleno de dulce de leche",
-        "produced_quantity": 10000,
-        "produced_date": "1600902179238",
-        "due_date": "1601507218757"
-    },
-    "pallet": {
-        "address": "11210466091132267990L",
-        "passphrase": "melody apology bitter volume add age business refuse affair youth bracket clutch",
-        "publicKey": "0cacb50dda41158fda3c3e86f9d7a9944934846885312aa79185309ffedd9d04",
-        "privateKey": "262a42d5d4228c5da8d726ecfd5f18b36d1fd6dd13607eb067a51346996ed8ea0cacb50dda41158fda3c3e86f9d7a9944934846885312aa79185309ffedd9d04"
-    }
+    "examples": [
+	{
+            "address": "9000837102371535794L",
+	    "type": "Market",
+            "passphrase": "galaxy bottom bounce success earth load cupboard repair eyebrow kitchen pistol ozone"
+        },
+        {
+            "address": "1853159333580129910L",
+	    "type": "Producer",
+	    "passphrase": "reopen surprise shock make make jeans push ensure boring gloom ankle stem"
+        },
+        {
+            "address": "16537225521900431256L",
+	    "type": "Carrier",
+            "passphrase": "gasp mass rose pause case solid lyrics aerobic fly real seven confirm"
+        }
+    ]
 }

@@ -21,6 +21,9 @@ class FinishTransportTransaction extends BaseTransaction {
         await store.account.cache([
             {
                 address: this.asset.palletId,
+            },
+            {
+                address: this.senderId,
             }
         ]);
         /**

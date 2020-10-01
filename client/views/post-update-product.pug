@@ -1,0 +1,48 @@
+extends index.pug
+
+block content
+    h2 Update Product Info (Type: 80)
+
+    form(method='POST' action='/post-update-product')
+        div.form-group
+            label(for='productid') Product ID:
+            input#recipient.form-control(type='text', placeholder='Product ID' name='productid')
+        div.form-group
+            label(for='organic') Organic:
+            select#status.form-control.input-lg(name='organic')
+                option(value='true', selected= true) True
+                option(value='false') False
+        div.form-group
+            label(for='notacc') No TACC:
+            select#status.form-control.input-lg(name='notacc')
+                option(value='true', selected= true) True
+                option(value='false') False
+        div.form-group
+            label(for='transfat') Has Trans Fat:
+            select#status.form-control.input-lg(name='transfat')
+                option(value='true', selected= true) True
+                option(value='false') False
+        div.form-group
+            label(for='daily_units') Max Daily Units:
+            input#recipient.form-control(type='number', value=1 name='daily_units')
+        div.form-group
+            label(for='passphrase') Passphrase of Market:
+            input#recipient.form-control(type='text', value='galaxy bottom bounce success earth load cupboard repair eyebrow kitchen pistol ozone' name='passphrase')
+        button.btn.btn-warning(type='submit') Update Product Info
+
+    br
+    h3 Pallet IDs
+    pre
+        table.table.table-striped
+            thead
+                tr
+                    th(scope='col') Address
+                    th(scope='col') Balance
+                    th(scope='col') Asset
+
+            tbody
+                each account in accounts
+                    tr
+                        td= account.address
+                        td= account.balance
+                        td= JSON.stringify(account.asset, null, 2)

@@ -21,6 +21,9 @@ class RegisterProductTransaction extends BaseTransaction {
         await store.account.cache([
             {
                 address: this.asset.productId,
+            },
+            {
+                address: this.senderId,
             }
         ]);
     }

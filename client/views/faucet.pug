@@ -1,0 +1,33 @@
+extends index.pug
+
+block content
+    h2 Faucet
+    p
+        | Send funds to account from Genesis
+
+    form(method='POST' action='/faucet')
+        div.form-group
+            label(for='address') Address:
+            input.form-control(type='text', placeholder='address' name='address')
+        div.form-group
+            label(for='amount') Amount (LSK):
+            input#amount.form-control(type='text', placeholder='1000' name='amount')
+        button.btn.btn-warning(type='submit') Fund
+    
+    br 
+    h3 Examples 
+    pre
+        table.table.table-striped
+            thead
+                tr
+                    th(scope='col') Address
+                    th(scope='col') Type
+                    th(scope='col') Passphrase 
+
+            tbody
+                each account in accounts
+                    tr
+                        td= account.address
+                        td= account.type
+                        td= account.passphrase
+

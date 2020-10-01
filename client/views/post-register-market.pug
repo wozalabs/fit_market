@@ -1,0 +1,19 @@
+extends index.pug
+
+block content
+    h2 Register a new Market (Type: 20)
+
+    form(method='POST' action='/post-register-market')
+        div.form-group
+            label(for='marketid') Market ID:
+            input.form-control(type='text', value='9000837102371535794L' name='marketid')
+        div.form-group
+            label(for='name') Name:
+            input#name.form-control(type='text', value='Fit Market' name='name')
+        div.form-group
+            label(for='latitude') Latitude:
+            input#latitude.form-control(type='text', value='-34.6037' name='latitude')
+        div.form-group
+            label(for='longitude') Longitude:
+            input#longitude.form-control(type='text', value='-58.3819' name='longitude')
+        button.btn.btn-warning(type='submit') Register

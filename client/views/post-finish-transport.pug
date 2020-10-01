@@ -1,0 +1,35 @@
+extends index.pug
+
+block content
+    h2 Finish Transport (Type: 70)
+
+    form(method='POST' action='/post-finish-transport')
+        div.form-group
+            label(for='palletid') Pallet ID:
+            input#recipient.form-control(type='text', placeholder='Pallet ID' name='palletid')
+        div.form-group
+            label(for='status') Status:
+            select#status.form-control.input-lg(name='status')
+                option(value='success', selected= true) Success
+                option(value='fail') Fail
+        div.form-group
+            label(for='passphrase') Passphrase of Recipient (Market):
+            input#recipient.form-control(type='text', value='galaxy bottom bounce success earth load cupboard repair eyebrow kitchen pistol ozone' name='passphrase')
+        button.btn.btn-warning(type='submit') Finish Transport
+
+    br
+    h3 Pallet IDs
+    pre
+        table.table.table-striped
+            thead
+                tr
+                    th(scope='col') Address
+                    th(scope='col') Balance
+                    th(scope='col') Asset
+
+            tbody
+                each account in accounts
+                    tr
+                        td= account.address
+                        td= account.balance
+                        td= JSON.stringify(account.asset, null, 2)

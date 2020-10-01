@@ -1,0 +1,19 @@
+extends index.pug
+
+block content
+    h2 Register a new Producer (Type: 30)
+
+    form(method='POST' action='/post-register-producer')
+        div.form-group
+            label(for='producerid') Producer ID:
+            input.form-control(type='text', value='1853159333580129910L' name='producerid')
+        div.form-group
+            label(for='name') Name:
+            input#name.form-control(type='text', value='Woza Labs Alfajores' name='name')
+        div.form-group
+            label(for='latitude') Latitude:
+            input#latitude.form-control(type='text', value='-34.80041' name='latitude')
+        div.form-group
+            label(for='longitude') Longitude:
+            input#longitude.form-control(type='text', value='-58.38384' name='longitude')
+        button.btn.btn-warning(type='submit') Register

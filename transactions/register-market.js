@@ -21,6 +21,9 @@ class RegisterMarketTransaction extends BaseTransaction {
         await store.account.cache([
             {
                 address: this.asset.marketId,
+            },
+            {
+                address: this.senderId,
             }
         ]);
     }

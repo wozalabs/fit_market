@@ -1,0 +1,63 @@
+extends index.pug
+
+block content
+    h2 Register a new Pallet (Type: 50)
+
+    form(method='POST' action='/post-register-pallet')
+        div.form-group
+            label(for='palletid') Pallet ID:
+            input.form-control(type='text', placeholder='Pallet ID' name='palletid')
+        div.form-group
+            label(for='recipientid') RecipientID:
+            input#name.form-control(type='text', value='9000837102371535794L' name='recipientid')
+        div.form-group
+            label(for='postage') Postage:
+            input#latitude.form-control(type='text', value='500' name='postage')
+        div.form-group
+            label(for='security') Security:
+            input#longitude.form-control(type='text', value='250' name='security')
+        div.form-group
+            label(for='productid') ProductID:
+            input#longitude.form-control(type='text', placeholder='Product ID' name='productid')
+        div.form-group
+            label(for='product_quantity') Product Quantity:
+            input#longitude.form-control(type=number, value=10000 name='product_quantity')
+        div.form-group
+            label(for='passphrase') Passphrase of producer:
+            input#recipient.form-control(type='text', value='reopen surprise shock make make jeans push ensure boring gloom ankle stem' name='passphrase')
+        button.btn.btn-warning(type='submit') Register
+
+    br
+    h3 Possible Pallet IDs
+    pre
+        table.table.table-striped
+            thead
+                tr
+                    th(scope='col') Address
+                    th(scope='col') Balance
+                    th(scope='col') Asset
+
+            tbody
+                each account in accounts
+                    tr
+                        td= account.address
+                        td= account.balance
+                        td= JSON.stringify(account.asset, null, 2)
+
+    br
+    h3 Product IDs
+    pre
+        table.table.table-striped
+            thead
+                tr
+                    th(scope='col') Address
+                    th(scope='col') Balance
+                    th(scope='col') Asset
+
+            tbody
+                each product in products
+                    tr
+                        td= product.address
+                        td= product.balance
+                        td= JSON.stringify(product.asset, null, 2)
+

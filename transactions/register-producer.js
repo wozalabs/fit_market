@@ -21,6 +21,9 @@ class RegisterProducerTransaction extends BaseTransaction {
         await store.account.cache([
             {
                 address: this.asset.producerId,
+            },
+            {
+                address: this.senderId,
             }
         ]);
     }

@@ -1,0 +1,49 @@
+extends index.pug
+
+block content
+    h2 Register a new Product (Type: 40)
+
+    form(method='POST' action='/post-register-product')
+        div.form-group
+            label(for='productid') Product ID:
+            input.form-control(type='text', placeholder='Product ID' name='productid')
+        div.form-group
+            label(for='name') Name:
+            input#name.form-control(type='text', value='Alfajor de nuez' name='name')
+        div.form-group
+            label(for='barcode') Barcode:
+            input#latitude.form-control(type='text', value='0076625228600' name='barcode')
+        div.form-group
+            label(for='batch') Batch ID:
+            input#longitude.form-control(type='text', value='NUEZ0001' name='batch')
+        div.form-group
+            label(for='produced_quantity') Produced Quantity:
+            input#longitude.form-control(type='number', value=10000 name='produced_quantity')
+        div.form-group
+            label(for='producet_date') Produced Date:
+            input#longitude.form-control(type='text', value='1600902179238' name='produced_date')
+        div.form-group
+            label(for='due_date') Due Date:
+            input#longitude.form-control(type='text', value='1601507218757' name='due_date')
+        div.form-group
+            label(for='passphrase') Passphrase of Producer:
+            input#recipient.form-control(type='text', value='reopen surprise shock make make jeans push ensure boring gloom ankle stem' name='passphrase')
+        button.btn.btn-warning(type='submit') Register
+
+    br
+    h3 Possible Product IDs
+    pre
+        table.table.table-striped
+            thead
+                tr
+                    th(scope='col') Address
+                    th(scope='col') Balance
+                    th(scope='col') Asset
+
+            tbody
+                each account in accounts
+                    tr
+                        td= account.address
+                        td= account.balance
+                        td= JSON.stringify(account.asset, null, 2)
+
